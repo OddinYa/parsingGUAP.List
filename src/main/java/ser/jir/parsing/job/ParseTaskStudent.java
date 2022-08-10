@@ -5,7 +5,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import ser.jir.parsing.models.Person;
@@ -29,11 +28,8 @@ public class ParseTaskStudent {
     public void parsePercon() throws IOException {
 
         String url = "https://priem.guap.ru/_lists/List_1364_15";
-
-        String str = null;
+        
         int count = 0;
-
-
 
         Document document = Jsoup.connect(url)
                 .userAgent("Mozilla")
